@@ -13,7 +13,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🌱 Green Chemistry Metrics Calculator")
+st.title("Green Chemistry Metrics Calculator")
 st.markdown("""
 Calculate fundamental green metrics like **Atom Economy ($AE$)**, **Reaction Mass Efficiency ($RME$)**, 
 **Process Mass Intensity ($PMI$)**, **E-Factor**, and **Carbon Efficiency ($CE$)** using SMILES and reaction mass logs.
