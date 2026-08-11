@@ -162,7 +162,7 @@ if prod_mw and all_reactants_valid:
         st.subheader("Mass Intensity Breakdown (PMI)")
         pmi_df = pd.DataFrame({
             "Category": ["Reactants", "Solvents", "Reagents/Catalysts", "Workup Materials", "Purification Media"],
-            "Mass (g)": [sum_reactant_mass, solvents_mass, reagents_mass, workup_mass, purification_mass]
+            "Mass (g)": [sum_reactant_mass, solvents_mass, reagents_mass, workup_mass] # ,purification_mass
         })
         fig_pie = px.pie(pmi_df, values="Mass (g)", names="Category", title="Input Mass Distribution", hole=0.4)
         st.plotly_chart(fig_pie, use_container_width=True)
