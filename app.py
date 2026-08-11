@@ -101,9 +101,9 @@ with col_right:
     workup_mass = st.number_input("Workup & Extraction Materials Total Mass (g)", min_value=0.0, value=50.0, step=1.0)
     purification_mass = st.number_input("Purification Media / Silica Gel (g)", min_value=0.0, value=10.0, step=1.0)
 
-    st.markdown("---")
-    st.subheader("3. Environmental Penalty Parameters")
-    hazard_penalty = st.slider("Solvent/Hazard Risk Multiplier (1 = Very Safe, 5 = High Toxicity)", 1, 5, 2)
+   # st.markdown("---")
+   # st.subheader("3. Environmental Penalty Parameters")
+   # hazard_penalty = st.slider("Solvent/Hazard Risk Multiplier (1 = Very Safe, 5 = High Toxicity)", 1, 5, 2)
 
 # -----------------------------------------------------------------------------
 # Calculations & Output
@@ -151,7 +151,7 @@ if prod_mw and all_reactants_valid:
     m3.metric("Carbon Efficiency", f"{ce:.1f}%")
     m4.metric("PMI", f"{pmi:.2f}")
     m5.metric("E-Factor", f"{e_factor:.2f}")
-    m6.metric("Green Score", f"{final_green_score:.1f} / 100")
+    # m6.metric("Green Score", f"{final_green_score:.1f} / 100")
 
     st.markdown("---")
 
