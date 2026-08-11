@@ -140,9 +140,9 @@ if prod_mw and all_reactants_valid:
 
     # Composite Green Score (0 to 100 scale heuristic)
     # AE & RME reward high %, PMI & Hazard penalize
-    pmi_score = max(0, 100 - (pmi * 2))
-    raw_green_score = (ae * 0.25) + (rme * 0.25) + (ce * 0.20) + (pmi_score * 0.30)
-    final_green_score = max(0, min(100, raw_green_score / (1 + (hazard_penalty - 1) * 0.1)))
+   # pmi_score = max(0, 100 - (pmi * 2))
+   # raw_green_score = (ae * 0.25) + (rme * 0.25) + (ce * 0.20) + (pmi_score * 0.30)
+   # final_green_score = max(0, min(100, raw_green_score / (1 + (hazard_penalty - 1) * 0.1)))
 
     # Metrics Display Cards
     m1, m2, m3, m4, m5, m6 = st.columns(6)
