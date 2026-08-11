@@ -161,7 +161,7 @@ if prod_mw and all_reactants_valid:
     with col_chart1:
         st.subheader("Mass Intensity Breakdown (PMI)")
         pmi_df = pd.DataFrame({
-            "Category": ["Reactants", "Solvents", "Reagents/Catalysts", "Workup Materials", "Purification Media"],
+            "Category": ["Reactants", "Solvents", "Reagents/Catalysts", "Workup Materials"],
             "Mass (g)": [sum_reactant_mass, solvents_mass, reagents_mass, workup_mass] # ,purification_mass
         })
         fig_pie = px.pie(pmi_df, values="Mass (g)", names="Category", title="Input Mass Distribution", hole=0.4)
