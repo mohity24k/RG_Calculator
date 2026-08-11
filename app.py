@@ -99,7 +99,7 @@ with col_right:
     solvents_mass = st.number_input("Reaction Solvents Total Mass (g)", min_value=0.0, value=80.0, step=1.0)
     reagents_mass = st.number_input("Reagents / Catalysts Total Mass (g)", min_value=0.0, value=2.0, step=0.5)
     workup_mass = st.number_input("Workup & Extraction Materials Total Mass (g)", min_value=0.0, value=50.0, step=1.0)
-    purification_mass = st.number_input("Purification Media / Silica Gel (g)", min_value=0.0, value=10.0, step=1.0)
+    # purification_mass = st.number_input("Purification Media / Silica Gel (g)", min_value=0.0, value=10.0, step=1.0)
 
    # st.markdown("---")
    # st.subheader("3. Environmental Penalty Parameters")
@@ -124,7 +124,7 @@ if prod_mw and all_reactants_valid:
     rme = (prod_mass / sum_reactant_mass) * 100 if sum_reactant_mass > 0 else 0
 
     # 3. Process Mass Intensity (PMI)
-    total_input_mass = sum_reactant_mass + solvents_mass + reagents_mass + workup_mass + purification_mass
+    total_input_mass = sum_reactant_mass + solvents_mass + reagents_mass + workup_mass # + purification_mass
     pmi = total_input_mass / prod_mass if prod_mass > 0 else 0
 
     # 4. E-Factor
